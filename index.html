@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greek Mythology</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px;
+        }
+        h1 {
+            font-size: 3.5rem;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            margin-bottom: 50px;
+            font-style: italic;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            width: 100%;
+        }
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255,215,0,0.5);
+            box-shadow: 0 10px 40px rgba(255,215,0,0.1);
+        }
+        .card h2 {
+            color: #ffd700;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+        .card p {
+            color: #c0c0c0;
+            line-height: 1.6;
+        }
+        footer {
+            margin-top: 60px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Greek Mythology</h1>
+    <p class="subtitle">Ancient tales of gods, heroes, and legendary creatures</p>
+    
+    <div class="card-container">
+        <div class="card">
+            <h2>Gods & Goddesses</h2>
+            <p>Explore the pantheon of Olympus, from Zeus the thunderer to Athena the wise.</p>
+        </div>
+        <div class="card">
+            <h2>Heroes & Legends</h2>
+            <p>Discover the epic journeys of Hercules, Perseus, and other legendary heroes.</p>
+        </div>
+        <div class="card">
+            <h2>Mythical Creatures</h2>
+            <p>Encounter Medusa, the Minotaur, and other fascinating beings of myth.</p>
+        </div>
+        <div class="card">
+            <h2>Epic Tales</h2>
+            <p>Relive the Trojan War, the Odyssey, and timeless stories of ancient Greece.</p>
+        </div>
+    </div>
+    
+    <footer>Built with passion for mythology</footer>
+</body>
+</html>
