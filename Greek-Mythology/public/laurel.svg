@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <g stroke="#A87C2A" stroke-width="1.6" stroke-linecap="round">
+    <!-- left branch -->
+    <path d="M14 50 C 12 38, 18 24, 30 14" fill="none"/>
+    <!-- right branch -->
+    <path d="M50 50 C 52 38, 46 24, 34 14" fill="none"/>
+  </g>
+  <!-- leaves: left branch -->
+  <g fill="#A87C2A">
+    <ellipse cx="15.6" cy="44" rx="5.2" ry="2.2" transform="rotate(-38 15.6 44)"/>
+    <ellipse cx="14.2" cy="36" rx="5.2" ry="2.2" transform="rotate(-58 14.2 36)"/>
+    <ellipse cx="16.2" cy="28" rx="5.2" ry="2.2" transform="rotate(-76 16.2 28)"/>
+    <ellipse cx="21" cy="21.4" rx="5.2" ry="2.2" transform="rotate(-96 21 21.4)"/>
+    <ellipse cx="27.4" cy="16.4" rx="5" ry="2.1" transform="rotate(-118 27.4 16.4)"/>
+    <!-- inner left leaves -->
+    <ellipse cx="20.6" cy="46.6" rx="4.4" ry="1.9" transform="rotate(-14 20.6 46.6)"/>
+    <ellipse cx="20" cy="38.8" rx="4.4" ry="1.9" transform="rotate(-32 20 38.8)"/>
+    <ellipse cx="22.6" cy="31.4" rx="4.4" ry="1.9" transform="rotate(-52 22.6 31.4)"/>
+    <ellipse cx="27.6" cy="25.4" rx="4.4" ry="1.9" transform="rotate(-74 27.6 25.4)"/>
+    <!-- leaves: right branch (mirrored) -->
+    <ellipse cx="48.4" cy="44" rx="5.2" ry="2.2" transform="rotate(38 48.4 44)"/>
+    <ellipse cx="49.8" cy="36" rx="5.2" ry="2.2" transform="rotate(58 49.8 36)"/>
+    <ellipse cx="47.8" cy="28" rx="5.2" ry="2.2" transform="rotate(76 47.8 28)"/>
+    <ellipse cx="43" cy="21.4" rx="5.2" ry="2.2" transform="rotate(96 43 21.4)"/>
+    <ellipse cx="36.6" cy="16.4" rx="5" ry="2.1" transform="rotate(118 36.6 16.4)"/>
+    <!-- inner right leaves -->
+    <ellipse cx="43.4" cy="46.6" rx="4.4" ry="1.9" transform="rotate(14 43.4 46.6)"/>
+    <ellipse cx="44" cy="38.8" rx="4.4" ry="1.9" transform="rotate(32 44 38.8)"/>
+    <ellipse cx="41.4" cy="31.4" rx="4.4" ry="1.9" transform="rotate(52 41.4 31.4)"/>
+    <ellipse cx="36.4" cy="25.4" rx="4.4" ry="1.9" transform="rotate(74 36.4 25.4)"/>
+  </g>
+  <!-- tie ribbon at bottom -->
+  <path d="M22 52 C 26 56, 38 56, 42 52" stroke="#A87C2A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <circle cx="32" cy="54.6" r="2" fill="#A87C2A"/>
+</svg>
