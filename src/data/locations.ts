@@ -40,7 +40,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/ˈæθɪnz/',
     type: 'city',
     maps: ['greece', 'trojan'],
-    coords: { greece: { x: 48, y: 42 }, trojan: { x: 20, y: 50 } },
+    coords: { greece: { x: 48, y: 42 }, trojan: { x: 16, y: 50 } },
     description:
       'The great city of Attica took its name and patronage from Athena, who won its devotion by gifting the olive tree in her contest with Poseidon. Athens was the homeland of Theseus, slayer of the Minotaur, and the stage for the tragedies of the house of Thebes and the house of Atreus. Its Acropolis and Parthenon remain enduring monuments to the goddess of wisdom.',
     relatedIds: ['athena', 'poseidon', 'theseus', 'house-of-thebes', 'house-of-atreus'],
@@ -51,7 +51,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/θiːbz/',
     type: 'city',
     maps: ['greece', 'trojan'],
-    coords: { greece: { x: 42, y: 35 }, trojan: { x: 16, y: 44 } },
+    coords: { greece: { x: 42, y: 35 }, trojan: { x: 13, y: 43 } },
     description:
       'Founded by Cadmus, who sowed the dragon\'s teeth and reaped a harvest of armed men, Thebes was one of the most storied cities of Boeotia. It was the city of Oedipus and Antigone, the birthplace of Heracles and Dionysus, and the setting of the doomed war of the Seven against Thebes. Few Greek cities are so thickly woven into tragedy.',
     relatedIds: ['house-of-thebes', 'house-of-cadmus', 'heracles', 'dionysus', 'cadmus', 'oedipus', 'creon'],
@@ -62,7 +62,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/ˈɑːrɡəs/',
     type: 'city',
     maps: ['greece', 'trojan'],
-    coords: { greece: { x: 35, y: 47 }, trojan: { x: 18, y: 58 } },
+    coords: { greece: { x: 35, y: 47 }, trojan: { x: 14, y: 58 } },
     description:
       'One of the oldest cities of Greece, Argos was sacred above all to Hera, whose great temple, the Heraion, stood nearby. It sent warriors to Troy under Diomedes and was bound up with the legends of Perseus and the house of Atreus. In Homer, "Argive" is a byword for the Achaean host itself.',
     relatedIds: ['hera', 'perseus', 'trojan-war', 'house-of-atreus'],
@@ -73,7 +73,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/maɪˈsiːniː/',
     type: 'city',
     maps: ['greece', 'trojan'],
-    coords: { greece: { x: 41, y: 52 }, trojan: { x: 14, y: 62 } },
+    coords: { greece: { x: 41, y: 52 }, trojan: { x: 13, y: 62 } },
     description:
       'The mighty citadel of Agamemnon, "rich in gold," Mycenae was the seat of the house of Atreus and the command center of the Greek expedition against Troy. Its Lion Gate and cyclopean walls still testify to its legendary power. Here Agamemnon returned in triumph from Troy, only to be murdered by Clytemnestra, and here Orestes avenged him.',
     relatedIds: ['house-of-atreus', 'trojan-war', 'iliad'],
@@ -117,7 +117,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/ˈɪθəkə/',
     type: 'island',
     maps: ['greece', 'trojan', 'odyssey'],
-    coords: { greece: { x: 26, y: 47 }, trojan: { x: 8, y: 48 }, odyssey: { x: 37, y: 52 } },
+    coords: { greece: { x: 26, y: 47 }, trojan: { x: 7, y: 49 }, odyssey: { x: 37, y: 52 } },
     description:
       'A small, rocky island off the western coast of Greece, Ithaca was the beloved kingdom of Odysseus and the fixed star of his ten-year wanderings. While he was away, Penelope held off her suitors by her famous weaving trick, and Telemachus grew to manhood. Odysseus\'s return and vengeance on the suitors closes the Odyssey.',
     relatedIds: ['odysseus', 'odyssey', 'athena'],
@@ -128,7 +128,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/kriːt/',
     type: 'island',
     maps: ['greece', 'trojan'],
-    coords: { greece: { x: 55, y: 85 }, trojan: { x: 66, y: 88 } },
+    coords: { greece: { x: 55, y: 85 }, trojan: { x: 65, y: 86 } },
     description:
       'The largest of Greek islands, Crete was where the infant Zeus was hidden in a cave to escape the devouring Cronus. It was the realm of King Minos, keeper of the Minotaur in Daedalus\'s Labyrinth, where Theseus came among the Athenian tribute and slew the monster with Ariadne\'s help. Crete thus links the birth of the gods with the greatest Athenian hero.',
     relatedIds: ['zeus', 'theseus', 'rhea', 'cronus', 'house-of-cadmus', 'minos'],
@@ -150,7 +150,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/trɔɪ/',
     type: 'city',
     maps: ['greece', 'trojan', 'odyssey'],
-    coords: { greece: { x: 82, y: 14 }, trojan: { x: 70, y: 25 }, odyssey: { x: 88, y: 20 } },
+    coords: { greece: { x: 82, y: 14 }, trojan: { x: 77, y: 26 }, odyssey: { x: 88, y: 20 } },
     description:
       'The fabled city of Priam, also called Ilium, stood in the Troad of northwest Anatolia behind walls said to have been built by Apollo and Poseidon. For ten years the Achaeans besieged it to recover Helen, until it fell to the ruse of the Wooden Horse. The sack of Troy is the pivot of Greek heroic legend, from the Iliad to the wanderings of Odysseus and the flight of Aeneas.',
     relatedIds: ['trojan-war', 'iliad', 'odyssey', 'achilles', 'aeneas', 'priam'],
@@ -194,7 +194,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/ˈlɛmnəs/',
     type: 'island',
     maps: ['greece', 'trojan'],
-    coords: { greece: { x: 62, y: 22 }, trojan: { x: 45, y: 30 } },
+    coords: { greece: { x: 62, y: 22 }, trojan: { x: 31, y: 34 } },
     description:
       'The volcanic island of Lemnos was sacred to Hephaestus, who landed here when hurled from Olympus, and whose forge was said to smoke beneath its earth. The Argonauts stopped here and found a land ruled by women after the Lemnian massacre, and during the Trojan War the Greeks abandoned the wounded Philoctetes on its shore. It recurs as a waystation of exile across heroic myth.',
     relatedIds: ['hephaestus', 'jason', 'trojan-war'],
@@ -260,7 +260,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/ˈlɛzbəs/',
     type: 'island',
     maps: ['trojan'],
-    coords: { trojan: { x: 68, y: 48 } },
+    coords: { trojan: { x: 63, y: 57 } },
     description:
       'A large, fertile island off the coast of the Troad, Lesbos was raided by Achilles during the nine years of warfare around Troy before the events of the Iliad. From its spoils came captive women allotted to the Greek chiefs, including some at the heart of the quarrel between Achilles and Agamemnon. In later ages it was famed as the home of the poet Sappho.',
     relatedIds: ['achilles', 'trojan-war', 'iliad'],
@@ -271,7 +271,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/lɜrˈnɛsəs/',
     type: 'city',
     maps: ['trojan'],
-    coords: { trojan: { x: 80, y: 54 } },
+    coords: { trojan: { x: 84, y: 54 } },
     description:
       'A city in the southern Troad allied with Troy, Lyrnessus was sacked by Achilles in the years of raiding that preceded the Iliad. Among its captives was Briseis, awarded to Achilles and then seized by Agamemnon — the insult that drove Achilles from the battle and set the poem\'s tragedy in motion.',
     relatedIds: ['achilles', 'iliad', 'trojan-war'],
@@ -282,7 +282,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/ˈkraɪsiː/',
     type: 'city',
     maps: ['trojan'],
-    coords: { trojan: { x: 76, y: 62 } },
+    coords: { trojan: { x: 80, y: 61 } },
     description:
       'A small coastal town of the Troad with a temple of Apollo Smintheus, Chryse was sacked by the Greeks, who carried off Chryseis, daughter of Apollo\'s priest. When Agamemnon refused to ransom her, Apollo struck the camp with plague, forcing the quarrel over Briseis that opens the Iliad. Odysseus himself sailed her home to appease the god.',
     relatedIds: ['apollo', 'iliad', 'odysseus', 'trojan-war'],
@@ -293,7 +293,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/ˈɔːlɪs/',
     type: 'city',
     maps: ['trojan'],
-    coords: { trojan: { x: 30, y: 70 } },
+    coords: { trojan: { x: 25, y: 68 } },
     description:
       'The Boeotian harbor where the Greek fleet gathered before sailing to Troy, Aulis was the scene of one of myth\'s darkest episodes. When Artemis becalmed the ships, Agamemnon was told he must sacrifice his daughter Iphigenia; in Euripides\' telling the goddess relented at the last moment and bore the girl away. The sacrifice poisoned the house of Atreus and seeded Clytemnestra\'s vengeance.',
     relatedIds: ['trojan-war', 'house-of-atreus', 'artemis'],

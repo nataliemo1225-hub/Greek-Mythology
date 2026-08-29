@@ -531,7 +531,13 @@ export default function Maps() {
                               </svg>
                             )}
                           </span>
-                          <span className="pointer-events-none absolute left-1/2 top-9 -translate-x-1/2 whitespace-nowrap rounded-sm border border-gold-bright/70 bg-night px-2.5 py-1 font-sans text-[0.72rem] font-semibold tracking-[0.08em] text-gold-bright shadow-warm">
+                          {/* Near the bottom edge the nameplate flips above the
+                              pin so the frame never clips it (e.g. Crete). */}
+                          <span
+                            className={`pointer-events-none absolute left-1/2 -translate-x-1/2 whitespace-nowrap rounded-sm border border-gold-bright/70 bg-night px-2.5 py-1 font-sans text-[0.72rem] font-semibold tracking-[0.08em] text-gold-bright shadow-warm ${
+                              c.y > 78 ? 'bottom-9' : 'top-9'
+                            }`}
+                          >
                             {m.name}
                           </span>
                         </>
