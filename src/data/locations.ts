@@ -29,7 +29,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/ˈdiːlɑːs/',
     type: 'island',
     maps: ['greece'],
-    coords: { greece: { x: 58, y: 52 } },
+    coords: { greece: { x: 60, y: 52 } },
     description:
       'A tiny, barren island in the Cyclades, Delos was the only place that would receive the wandering Leto when she was heavy with Zeus\'s children and hunted by Hera\'s jealousy. There she gave birth to Apollo and Artemis, making Delos one of the holiest sanctuaries in the Greek world. The island became a great pilgrimage center and treasury of the Delian League.',
     relatedIds: ['apollo', 'artemis', 'leto', 'zeus', 'hera'],
@@ -117,7 +117,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/ˈɪθəkə/',
     type: 'island',
     maps: ['greece', 'trojan', 'odyssey'],
-    coords: { greece: { x: 26, y: 47 }, trojan: { x: 7, y: 49 }, odyssey: { x: 37, y: 52 } },
+    coords: { greece: { x: 26, y: 47 }, trojan: { x: 7, y: 49 }, odyssey: { x: 36, y: 50 } },
     description:
       'A small, rocky island off the western coast of Greece, Ithaca was the beloved kingdom of Odysseus and the fixed star of his ten-year wanderings. While he was away, Penelope held off her suitors by her famous weaving trick, and Telemachus grew to manhood. Odysseus\'s return and vengeance on the suitors closes the Odyssey.',
     relatedIds: ['odysseus', 'odyssey', 'athena'],
@@ -150,7 +150,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/trɔɪ/',
     type: 'city',
     maps: ['greece', 'trojan', 'odyssey'],
-    coords: { greece: { x: 82, y: 14 }, trojan: { x: 77, y: 26 }, odyssey: { x: 88, y: 20 } },
+    coords: { greece: { x: 82, y: 14 }, trojan: { x: 77, y: 26 }, odyssey: { x: 88, y: 29 } },
     description:
       'The fabled city of Priam, also called Ilium, stood in the Troad of northwest Anatolia behind walls said to have been built by Apollo and Poseidon. For ten years the Achaeans besieged it to recover Helen, until it fell to the ruse of the Wooden Horse. The sack of Troy is the pivot of Greek heroic legend, from the Iliad to the wanderings of Odysseus and the flight of Aeneas.',
     relatedIds: ['trojan-war', 'iliad', 'odyssey', 'achilles', 'aeneas', 'priam'],
@@ -205,7 +205,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/ˈnæksəs/',
     type: 'island',
     maps: ['greece'],
-    coords: { greece: { x: 60, y: 58 } },
+    coords: { greece: { x: 59, y: 60 } },
     description:
       'The largest of the Cyclades, Naxos is where Theseus abandoned the sleeping Ariadne after their escape from Crete. There Dionysus discovered her, made her his immortal bride, and set her crown among the stars. Earlier still, its shores saw the Nereids dance — and Poseidon, watching, first beheld Amphitrite, who would one day be his queen. The island remained sacred to Dionysus, god of wine and ecstasy.',
     relatedIds: ['dionysus', 'theseus', 'poseidon'],
@@ -216,7 +216,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/ˈsaɪprəs/',
     type: 'island',
     maps: ['greece'],
-    coords: { greece: { x: 88, y: 80 } },
+    coords: { greece: { x: 80, y: 74 } },
     description:
       'The great island of the eastern sea received the newborn Aphrodite when the waves bore her ashore from the sea-foam, and she stepped onto the sand at Paphos with grass and flowers springing beneath her feet. Cyprus remained her holiest island ever after — she is called the Cypris for it — and Paphos held her greatest sanctuary, where the Graces bathed and anointed her. To Cyprus she returned to wash away shame, and from Cyprus her power went out over gods and mortals alike.',
     relatedIds: ['aphrodite'],
@@ -227,7 +227,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/ˈtaɪr/',
     type: 'city',
     maps: ['greece'],
-    coords: { greece: { x: 93, y: 87 } },
+    coords: { greece: { x: 95, y: 76 } },
     description:
       'The great sea-city of Phoenicia, built on an island just off the eastern shore, Tyre was the seat of King Agenor and the home of his daughter Europa — the princess whom Zeus, in the shape of a snow-white bull, carried across the sea to Crete. Her brother Cadmus sailed from Tyre in search of her and, failing, founded Thebes instead, bringing the Phoenician alphabet to Greece. To the Greeks the city marked the far edge of the world: wandering home from Troy, Menelaus strayed as far as Egypt and the Phoenician coast before he found his way back to Sparta.',
     relatedIds: ['zeus', 'cadmus', 'house-of-cadmus', 'menelaus'],
@@ -238,7 +238,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/fəˈnɪʃə/',
     type: 'realm',
     maps: ['greece'],
-    coords: { greece: { x: 92, y: 81 } },
+    coords: { greece: { x: 91, y: 71 } },
     description:
       'The narrow coastal strip of the eastern Mediterranean — Tyre, Sidon, Byblos — was home to the Phoenicians, the greatest seafarers and traders of the age, famous for their purple dye and for the alphabet they carried westward. In myth it is the homeland of Europa and her brother Cadmus, and the distant shore where Menelaus wandered on his long way home from Troy. For the Greeks, Phoenicia stood at the very horizon of the known world.',
     relatedIds: ['zeus', 'cadmus', 'house-of-cadmus', 'menelaus'],
@@ -315,7 +315,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/ˈaɪlənd əv ðə saɪˈkloʊpiːz/',
     type: 'island',
     maps: ['odyssey'],
-    coords: { odyssey: { x: 50, y: 60 } },
+    coords: { odyssey: { x: 60, y: 51 } },
     description:
       'A wild, lawless island where the one-eyed Cyclopes lived without agriculture, councils, or laws. Here Odysseus was trapped in the cave of Polyphemus, son of Poseidon, escaping only by blinding the giant and clinging beneath his sheep — but the boast that followed earned him Poseidon\'s lasting hatred. Its real location, if any, has been debated since antiquity, with Sicily a favorite candidate.',
     relatedIds: ['odyssey', 'odysseus', 'poseidon'],
@@ -337,7 +337,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/ˌlɛstrɪˈɡoʊniə/',
     type: 'island',
     maps: ['odyssey'],
-    coords: { odyssey: { x: 55, y: 30 } },
+    coords: { odyssey: { x: 53, y: 33 } },
     description:
       'The land of the Laestrygonians, a race of giant cannibals whose king Antiphates devoured one of Odysseus\'s scouts. Hurling boulders from the cliffs, they smashed eleven of Odysseus\'s twelve ships in their narrow harbor; only his own vessel escaped. Its placement is entirely conjectural — a fairy-tale geography that scholars have argued over since antiquity.',
     relatedIds: ['odyssey', 'odysseus'],
@@ -392,7 +392,7 @@ export const locations: MythLocation[] = [
     pronunciation: '/oʊˈdʒɪdʒiə/',
     type: 'island',
     maps: ['odyssey'],
-    coords: { odyssey: { x: 25, y: 88 } },
+    coords: { odyssey: { x: 38, y: 84 } },
     description:
       'The remote island of the nymph Calypso, daughter of Atlas, where Odysseus was detained for seven years, offered immortality if he would stay. Only when Zeus sent Hermes to command his release did the hero build a raft and resume his homeward journey. Called "the navel of the sea," its location has puzzled geographers from antiquity onward.',
     relatedIds: ['odyssey', 'odysseus', 'atlas', 'hermes', 'zeus'],

@@ -495,6 +495,16 @@ export default function Maps() {
                   // readable minimum size. Both stay constant across zoom.
                   const badgeScale =
                     (isSelected ? Math.max(markerScale, 0.8) : markerScale) / view.scale
+                  // Nameplate placement: flips above near the bottom edge, swings
+                  // left of the pin near the top-right zoom controls, and shifts
+                  // back into the frame near the side edges.
+                  const plateZone = c.x > 80 && c.y < 34 ? 'left' : c.y > 78 ? 'above' : 'below'
+                  const plateShift =
+                    c.x > 80 ? '-translate-x-[85%]' : c.x <= 20 ? '-translate-x-[15%]' : '-translate-x-1/2'
+                  const platePos =
+                    plateZone === 'left'
+                      ? 'right-9 top-1/2 -translate-y-1/2'
+                      : `${plateZone === 'above' ? 'bottom-9' : 'top-9'} left-1/2 ${plateShift}`
                   return (
                     <button
                       key={m.id}
@@ -531,12 +541,8 @@ export default function Maps() {
                               </svg>
                             )}
                           </span>
-                          {/* Near the bottom edge the nameplate flips above the
-                              pin so the frame never clips it (e.g. Crete). */}
                           <span
-                            className={`pointer-events-none absolute left-1/2 -translate-x-1/2 whitespace-nowrap rounded-sm border border-gold-bright/70 bg-night px-2.5 py-1 font-sans text-[0.72rem] font-semibold tracking-[0.08em] text-gold-bright shadow-warm ${
-                              c.y > 78 ? 'bottom-9' : 'top-9'
-                            }`}
+                            className={`pointer-events-none absolute whitespace-nowrap rounded-sm border border-gold-bright/70 bg-night px-2.5 py-1 font-sans text-[0.72rem] font-semibold tracking-[0.08em] text-gold-bright shadow-warm ${platePos}`}
                           >
                             {m.name}
                           </span>
