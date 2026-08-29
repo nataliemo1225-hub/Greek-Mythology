@@ -101,6 +101,17 @@ export const locations: MythLocation[] = [
     relatedIds: ['jason', 'house-of-thebes', 'sisyphus'],
   },
   {
+    id: 'troezen',
+    name: 'Troezen',
+    pronunciation: '/ˈtriːzən/',
+    type: 'city',
+    maps: ['greece'],
+    coords: { greece: { x: 50, y: 47 } },
+    description:
+      'A small city on the Saronic coast of the Argolid, across the strait from Athens, Troezen was the birthplace of Theseus. Here King Pittheus, famed for wisdom, gave his daughter Aethra to the visiting Aegeus, and beneath a great hollow rock outside the city the Athenian king hid the sword and sandals his son would one day lift. Some say Poseidon also claimed Aethra that same night, giving Troezen a hero of double paternity. In his last years Theseus sent his son Hippolytus to be raised here, where the youth was worshipped ever after, and brides cut locks of their hair for him before their weddings.',
+    relatedIds: ['theseus', 'poseidon', 'athens'],
+  },
+  {
     id: 'ithaca',
     name: 'Ithaca',
     pronunciation: '/ˈɪθəkə/',
@@ -442,3 +453,21 @@ export const locations: MythLocation[] = [
     relatedIds: ['gigantomachy', 'zeus', 'athena', 'heracles'],
   },
 ];
+
+/** First-rank places, shown at every zoom level on the atlas. Every other
+ *  location defaults to 'minor' prominence and fades in once the reader zooms
+ *  in (see MINOR_REVEAL in Maps.tsx), keeping a growing atlas legible. */
+export const MAJOR_LOCATION_IDS: ReadonlySet<string> = new Set([
+  'olympus',
+  'delphi',
+  'athens',
+  'thebes',
+  'mycenae',
+  'sparta',
+  'corinth',
+  'ithaca',
+  'crete',
+  'knossos',
+  'troy',
+  'underworld',
+]);

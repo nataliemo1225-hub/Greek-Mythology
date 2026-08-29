@@ -314,9 +314,102 @@ The story proved inexhaustible. Seneca carried it to the Roman stage in his Phae
           },
         ],
       },
+      {
+        eyebrow: 'The Theft of Sparta\'s Princess',
+        title: 'Theseus Kidnaps Helen',
+        relatedIds: ['menelaus', 'hades', 'persephone'],
+        lede:
+          `It is the least defensible adventure of Athens' national hero: Theseus, grown old enough to know better, swore with his friend Pirithous that each would wed a daughter of Zeus — and began by stealing a child. The child was Helen of Sparta, not yet old enough for marriage, already the most beautiful girl in the world. Her brothers did not forgive it, and the price of the escapade was Theseus's city itself.`,
+        facts: [
+          { label: 'The bride', value: 'Helen of Sparta, daughter of Zeus and Leda' },
+          { label: 'The accomplice', value: 'Pirithous, king of the Lapiths' },
+          { label: 'The hiding place', value: 'Aphidnae in Attica, guarded by Aethra' },
+          { label: 'The rescuers', value: 'Castor and Pollux, the Dioscuri' },
+        ],
+        sections: [
+          {
+            heading: 'An Oath Between Friends',
+            body:
+              `Theseus and Pirithous had sworn their friendship over stolen cattle at Marathon, and in middle age they swore a stranger oath: since both were sons of gods, each deserved a daughter of Zeus for a wife, and each would help the other win one. Pirithous came first to aid his friend. The bride they chose was Helen — daughter of Zeus and Leda, sister of Castor and Pollux, a girl of Sparta so young that the tellers insist on it: seven years old, say some; ten or twelve, say others, but in every account a child, not yet of marriageable age.
+
+They found her dancing in the sanctuary of Artemis Orthia — or, in other tellings, offering sacrifice — and seized her and carried her off northward, outrunning pursuit as far as Tegea. There the two friends drew lots for their prize, with a rider attached that would undo them both: whoever won Helen would stand bound to help the loser win his own daughter of Zeus, wherever she might be found. The lot fell to Theseus.`,
+          },
+          {
+            heading: 'The Girl Hidden in the Hills',
+            body:
+              `Theseus did not bring his stolen bride to Athens, where the outcry would have been loudest. He carried her to Aphidnae, a small stronghold in the Attic hills, and set his own mother Aethra to guard her — the same Aethra who had once kept the secret of his birth beneath the stone at Troezen. There Helen was to wait until she grew old enough for the marriage her kidnapper had sworn to make.
+
+Some poets, uneasy for their hero, tried to soften the tale: in one telling it was not Theseus at all but a grandson of Pelops who took the girl; in another, Theseus only rescued her from other abductors. Athens itself half-remembered otherwise. The people of Aphidnae kept the story of the siege in their local memory, and the Athenians did not deny that the Dioscuri had once come in arms to Attic soil on Helen's account.`,
+          },
+          {
+            heading: 'The Price of the Oath',
+            body:
+              `Bound by the lot, Pirithous now named his own daughter of Zeus, and the choice was madness itself: Persephone, queen of the dead. Theseus, who had stolen a child of earth, must now descend with his friend to steal the bride of Hades. The pair went down by the chasm at Taenarum and sat, in the dark king's hall, upon the Chair of Forgetfulness — and the chair held them fast, their flesh growing into its stone. There Theseus stayed while the seasons turned above, until Heracles, descending for the hound Cerberus, took him by the hand and hauled him free. Pirithous, whose desire had been the greater impiety, no hero could loose; he sits there still.
+
+While Theseus was below, the reckoning came to Attica. Castor and Pollux, Helen's brothers, marched against Athens demanding their sister. The city swore it did not have her; then someone told the brothers where she was hidden — the Athenians later blamed the people of Aphidnae, or one Titacus, for the betrayal. The Dioscuri stormed the stronghold, carried Helen home, and took Aethra captive to serve their sister as a slave; they even led away Theseus's own kin among the prisoners.`,
+          },
+          {
+            heading: 'A Kingdom Lost in Absence',
+            body:
+              `The brothers did not stop at the rescue. Finding Athens without its king, they set a rival on the throne: Menestheus, of the old royal line, who had spent Theseus's absence whispering to the city that its hero had abandoned it for foreign adventures and a stolen child. When Theseus climbed back out of the underworld — maimed in spirit, say the tellers, and part of him left behind on the chair — he came home to walls that would no longer open for him.
+
+So the theft of Helen ends in the undoing of the thief: the girl restored to Sparta to grow up and set the world alight in her own time; his mother carried into slavery; his city given to another; and the oath to Pirithous left hanging in the dark below. Later Athenians, who worshipped Theseus as the founder of their democracy, kept this chapter of his life deliberately quiet — but they never quite erased it, and the playwrights and vase-painters knew that the greatest Athenian had once been driven from Athens itself.`,
+          },
+        ],
+      },
+      {
+        eyebrow: 'The End of Athens\' Hero',
+        title: 'The Death of Theseus',
+        relatedIds: ['menelaus', 'minos'],
+        lede:
+          `The hero who had walked out of the Labyrinth and been pulled out of the underworld did not die fighting a monster. He died as exiles die: far from his own city, on a small island, shoved from a cliff by a host he had trusted. Athens let his bones lie in foreign earth for generations — until a ghost at Marathon and a word from Delphi brought them home.`,
+        facts: [
+          { label: 'The island', value: 'Skyros, in the northern Aegean' },
+          { label: 'The host', value: 'Lycomedes, king of Skyros' },
+          { label: 'The manner', value: 'Hurled from a sea-cliff' },
+          { label: 'The homecoming', value: 'His bones brought back by Cimon, 476 BCE' },
+        ],
+        sections: [
+          {
+            heading: 'The Return That Failed',
+            body:
+              `Theseus came back from the underworld to an Athens that had unmade him. Menestheus sat on the throne, installed by the Dioscuri and confirmed by a city taught to resent its absent king. Theseus tried to recover the people's allegiance and failed; the nobles were against him, and the crowd he had once assembled into a single city would no longer gather at his call. He sent his sons by Phaedra — Acamas and Demophon — across the strait to Euboea, to the shelter of King Elephenor, and prepared to follow into exile.
+
+Before he sailed, he did a thing unlike the lawgiver of Athens: at Gargettus he stood and cursed the Athenians, and the place was pointed out for centuries afterward — the spot where the unifier of Attica called down ruin on his own people. Then the hero who had cleared the roads of every bandit left his city by the road he had made safe, and did not see it again.`,
+          },
+          {
+            heading: 'The Island and the Cliff',
+            body:
+              `He made first for Crete, where he had old ties through Ariadne and Phaedra, but contrary winds drove him to Skyros, a rocky island in the northern Aegean. There Theseus believed himself safe: his father Aegeus had held estates on the island, and he went ashore as a man comes to his own inheritance, asking King Lycomedes to confirm him in his father's lands.
+
+Lycomedes received him with honor — and killed him. The tellers divide on the motive: some say the island king feared so great a guest, whose fame alone could unseat him; others that he was serving the wishes of Menestheus, or of the Spartans who remembered Helen. Under pretense of showing Theseus the boundaries of his estates, he led him up to the high cliffs above the sea and pushed him over. A kinder version lets the hero die by chance, slipping on a walk after dinner — but Athens remembered murder, and remembered the cliff.`,
+          },
+          {
+            heading: 'No Tomb for the Lawgiver',
+            body:
+              `So Theseus died: not before the walls of Troy, which his sons would see without him, nor in battle with Amazons or centaurs, but alone at the bottom of a foreign cliff, and no one raised a mound. Menestheus reigned, and died at Troy; the sons of Theseus came home in time and recovered the kingship. But the founder's grave was on Skyros, unmarked and unhonored, and generations of Athenians passed the hero's festival with his bones still in enemy earth.
+
+The indifference became a reproach that lasted nearly five hundred years — the span from the heroic age to the Persian Wars. Athens had grown great on the unity Theseus gave it, and had forgotten where he lay.`,
+          },
+          {
+            heading: 'The Ghost at Marathon',
+            body:
+              `On the field of Marathon in 490 BCE, when the Athenians faced the Persian host, many of them swore afterward that they had seen him: the phantom of Theseus in arms, charging ahead of the line against the barbarian. The hero had come back to defend the city that had exiled him. When the victory was won and the dead were counted, Athens remembered its debt, and asked Delphi what was owed.
+
+The oracle answered that they must find the bones of Theseus, bring them home, and honor them as a hero's. The command was easier given than kept: Skyros was held by the Dolopians, hard islanders who had no wish to surrender their unquiet guest.`,
+          },
+          {
+            heading: 'Cimon Brings the Bones Home',
+            body:
+              `It fell to Cimon, the son of Miltiades, to close the account. In 476 BCE he took Skyros for Athens, enslaved the Dolopians, and set himself to find the grave. The islanders would not help; but the tellers say an eagle was seen tearing at a patch of ground with its talons, and Cimon, taking it for a sign, dug there — and uncovered the coffin of a man of more than human size, and beside it a bronze spearhead and a sword.
+
+The bones were brought home on Cimon's own ship in triumph, as though the hero were returning from exile at last with the honors of a conqueror. Athens received him with processions and sacrifices, and buried him in the heart of the city in the sanctuary called the Theseion — which became a refuge for slaves, the poor, and the hunted, in memory of the hero who had once been a fugitive himself. So the story ends where it began: the stone at Troezen raised at the start of the road, the cliff at Skyros at its end, and between them the city he built — which forgot him, and then remembered him forever.`,
+          },
+        ],
+      },
     ],
     relatedIds: ['poseidon', 'heracles', 'hades', 'dionysus', 'atalanta', 'house-of-atreus'],
-    locationIds: ['athens', 'crete', 'naxos', 'underworld'],
+    locationIds: ['athens', 'troezen', 'crete', 'naxos', 'underworld'],
   },
   {
     id: 'achilles',

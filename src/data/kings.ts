@@ -416,7 +416,7 @@ export const kings: King[] = [
     keyMyths: [],
     heroId: 'theseus',
     relatedIds: ['minos', 'oedipus', 'poseidon'],
-    locationIds: ['athens', 'crete'],
+    locationIds: ['athens', 'troezen', 'crete'],
   },
   {
     id: 'odysseus',
