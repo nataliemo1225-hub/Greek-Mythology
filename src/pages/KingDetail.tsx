@@ -159,13 +159,14 @@ export default function KingDetail() {
         <section className="mx-auto max-w-[1200px] px-[clamp(20px,5vw,48px)] pb-[clamp(48px,7vw,88px)]">
           <div className="grid items-center gap-8 rounded-md hairline bg-parchment p-6 shadow-warm md:grid-cols-[280px_1fr]">
             <div className="group relative block overflow-hidden rounded-sm border border-gold/40">
-              <Link to="/maps" aria-label="Open the interactive atlas" className="block">
-                <img
-                  src="/map-greece.jpg"
-                  alt="Antique parchment map of the Aegean world"
-                  className="aspect-[10/7] w-full object-cover transition-transform duration-[800ms] group-hover:scale-105"
-                />
-              </Link>
+              {/* The plate itself never navigates either — on mobile readers tap
+                  the map again and again to compare marker labels; jumping to
+                  the atlas lives only on the name pills below */}
+              <img
+                src="/map-greece.jpg"
+                alt="Antique parchment map of the Aegean world"
+                className="aspect-[10/7] w-full object-cover"
+              />
               {/* Markers never navigate — tap toggles the name label (mobile
                   has no hover); jumping to the atlas lives on the name pills */}
               {kingLocations.map((loc) => {
