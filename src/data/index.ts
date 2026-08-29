@@ -5,6 +5,6 @@ export { olympians, otherDeities } from './olympians';
 export { heroes } from './heroes';
 export { kings } from './kings';
 export { stories } from './stories';
-export { locations } from './locations';
+export { locations, MAJOR_LOCATION_IDS } from './locations';
 export { tragicHouses } from './tragedies';
 export type { TragicHouse } from './tragedies';

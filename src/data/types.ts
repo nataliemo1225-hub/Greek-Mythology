@@ -84,6 +84,9 @@ export interface MythLocation {
   name: string;
   pronunciation?: string;  // American IPA, e.g. "/əˈlɪmpəs/"
   type: 'city' | 'mountain' | 'island' | 'sea' | 'realm';
+  /** Display rank on the atlas. When omitted, MAJOR_LOCATION_IDS in locations.ts
+   *  decides; minors fade in only once the reader zooms in. */
+  prominence?: 'major' | 'minor';
   maps: ('greece' | 'trojan' | 'odyssey')[];
   // percentage coordinates (0–100) per map: x = left→right, y = top→bottom
   coords: Partial<Record<'greece' | 'trojan' | 'odyssey', { x: number; y: number }>>;

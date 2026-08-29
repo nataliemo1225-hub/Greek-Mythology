@@ -57,6 +57,7 @@ function Portrait({ id, name, accent }: { id: string; name: string; accent: stri
 
 export default function GodDetail() {
   const { id } = useParams()
+  const [activeLocId, setActiveLocId] = useState<string | null>(null)
   const found = useMemo(() => findGod(id), [id])
 
   if (!found) return <Navigate to="/pantheon" replace />
@@ -204,31 +205,34 @@ export default function GodDetail() {
                   className="aspect-[10/7] w-full object-cover transition-transform duration-[800ms] group-hover:scale-105"
                 />
               </Link>
-              {/* Each marker deep-links to that place on the atlas */}
+              {/* Markers never navigate — tap toggles the name label (mobile
+                  has no hover); jumping to the atlas lives on the name pills */}
               {godLocations.map((loc) => {
                 const c = loc.coords.greece
                 if (!c) return null
+                const active = activeLocId === loc.id
                 return (
-                  <Link
+                  <button
                     key={loc.id}
-                    to={`/maps?loc=${loc.id}`}
+                    type="button"
+                    onClick={() => setActiveLocId(active ? null : loc.id)}
                     className="group/marker absolute z-10 flex h-6 w-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center"
                     style={{ left: `${c.x}%`, top: `${c.y}%` }}
-                    title={`View ${loc.name} on the atlas`}
-                    aria-label={`View ${loc.name} on the atlas`}
+                    aria-label={loc.name}
+                    aria-pressed={active}
                   >
                     <span
                       className="marker-pulse-ring absolute inset-1 rounded-full border-2 border-gold-bright"
                       aria-hidden
                     />
                     <span
-                      className="block h-2.5 w-2.5 rounded-full border border-ivory bg-terracotta shadow transition-colors group-hover/marker:bg-gold"
+                      className={`block h-2.5 w-2.5 rounded-full border border-ivory shadow transition-colors ${active ? 'bg-gold' : 'bg-terracotta group-hover/marker:bg-gold'}`}
                       aria-hidden
                     />
-                    <span className="pointer-events-none absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-sm border border-gold/50 bg-night px-2 py-1 font-sans text-[0.68rem] tracking-[0.08em] text-parchment-on-night opacity-0 shadow-warm transition-opacity duration-200 group-hover/marker:opacity-100">
+                    <span className={`pointer-events-none absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-sm border border-gold/50 bg-night px-2 py-1 font-sans text-[0.68rem] tracking-[0.08em] text-parchment-on-night shadow-warm transition-opacity duration-200 group-hover/marker:opacity-100 ${active ? 'opacity-100' : 'opacity-0'}`}>
                       {loc.name}
                     </span>
-                  </Link>
+                  </button>
                 )
               })}
             </div>
@@ -249,6 +253,12 @@ export default function GodDetail() {
                   </Link>
                 ))}
               </div>
+              <Link
+                to={`/maps?figure=${god.id}`}
+                className="mt-5 inline-flex items-center gap-2 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.12em] text-aegean transition-colors hover:text-gold"
+              >
+                Follow {god.name} across the atlas →
+              </Link>
             </div>
           </div>
         </section>
