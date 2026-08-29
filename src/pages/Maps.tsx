@@ -128,6 +128,8 @@ export default function Maps() {
   const [figure, setFigure] = useState<{ id: string; name: string; locationIds: string[] } | null>(null)
   const [view, setView] = useState<ViewState>(INITIAL_VIEW)
   const [dragging, setDragging] = useState(false)
+  /** Map frame width, so marker badges scale down on narrow (mobile) screens. */
+  const [frameW, setFrameW] = useState(0)
 
   const frameRef = useRef<HTMLDivElement>(null)
   const dragRef = useRef<{ x: number; y: number } | null>(null)
@@ -264,6 +266,22 @@ export default function Maps() {
     el.addEventListener('wheel', onWheel, { passive: false })
     return () => el.removeEventListener('wheel', onWheel)
   }, [])
+
+  // Track the frame width: marker badges are sized for a ~720px plate and
+  // shrink proportionally on smaller screens (down to half size on phones).
+  useEffect(() => {
+    const el = frameRef.current
+    if (!el) return
+    setFrameW(el.getBoundingClientRect().width)
+    const ro = new ResizeObserver((entries) => {
+      setFrameW(entries[0].contentRect.width)
+    })
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
+
+  /** Badge scale for the current screen: 1 on desktop, ~0.5 on phones. */
+  const markerScale = frameW ? Math.min(1, Math.max(0.5, frameW / 720)) : 1
 
   const onPointerDown = (e: ReactPointerEvent<HTMLDivElement>) => {
     if ((e.target as HTMLElement).closest('button')) return
@@ -473,6 +491,10 @@ export default function Maps() {
                     highlighted ||
                     view.scale >= MINOR_REVEAL ||
                     typeFilter !== 'all'
+                  // Badges shrink on narrow screens; the selected pin keeps a
+                  // readable minimum size. Both stay constant across zoom.
+                  const badgeScale =
+                    (isSelected ? Math.max(markerScale, 0.8) : markerScale) / view.scale
                   return (
                     <button
                       key={m.id}
@@ -483,7 +505,7 @@ export default function Maps() {
                       style={{
                         left: `${c.x}%`,
                         top: `${c.y}%`,
-                        transform: `translate(-50%, -50%) scale(${1 / view.scale})`,
+                        transform: `translate(-50%, -50%) scale(${badgeScale})`,
                         opacity: dimmed ? 0.25 : tierVisible ? 1 : 0,
                         pointerEvents: tierVisible ? 'auto' : 'none',
                         zIndex: isSelected ? 30 : highlighted ? 20 : 10,
