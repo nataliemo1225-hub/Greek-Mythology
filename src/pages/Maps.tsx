@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import type { PointerEvent as ReactPointerEvent } from 'react'
+import type { KeyboardEvent as ReactKeyboardEvent, PointerEvent as ReactPointerEvent } from 'react'
 import { useSearchParams } from 'react-router'
 import PageHero from '@/components/PageHero'
 import RelatedLinks from '@/components/RelatedLinks'
@@ -130,11 +130,16 @@ export default function Maps() {
   const [dragging, setDragging] = useState(false)
   /** Map frame width, so marker badges scale down on narrow (mobile) screens. */
   const [frameW, setFrameW] = useState(0)
+  /** Place search: query text, dropdown visibility, keyboard highlight. */
+  const [query, setQuery] = useState('')
+  const [searchOpen, setSearchOpen] = useState(false)
+  const [highlightIdx, setHighlightIdx] = useState(0)
 
   const frameRef = useRef<HTMLDivElement>(null)
   const dragRef = useRef<{ x: number; y: number } | null>(null)
   /** Accumulated pointer travel; below the threshold a press counts as a click. */
   const dragDistRef = useRef(0)
+  const searchRef = useRef<HTMLDivElement>(null)
 
   // Deep link support: /maps?loc=<id> preselects a location on its first map.
   useEffect(() => {
@@ -222,6 +227,59 @@ export default function Maps() {
     () => TYPE_ORDER.filter((t) => markers.some((m) => m.type === t)),
     [markers],
   )
+
+  // ── Place search ────────────────────────────────────────────────────────
+
+  /** Substring matches across every location, places on the active map first. */
+  const searchMatches = useMemo(() => {
+    const q = query.trim().toLowerCase()
+    if (!q) return []
+    const onMapScore = (l: MythLocation) =>
+      l.maps.includes(activeMap) && l.coords[activeMap] ? 0 : 1
+    return locations
+      .filter((l) => l.name.toLowerCase().includes(q))
+      .sort((a, b) => onMapScore(a) - onMapScore(b) || a.name.localeCompare(b.name, 'en'))
+      .slice(0, 8)
+  }, [query, activeMap])
+
+  /** Pick a suggestion: switch maps if it lives elsewhere, then select it. */
+  const chooseLocation = (loc: MythLocation) => {
+    const target = loc.maps.find((m) => loc.coords[m]) ?? loc.maps[0]
+    if (target !== activeMap) selectMap(target)
+    setSelectedId(loc.id)
+    setQuery('')
+    setSearchOpen(false)
+  }
+
+  const onSearchKeyDown = (e: ReactKeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Escape') {
+      setSearchOpen(false)
+      e.currentTarget.blur()
+    } else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault()
+      if (searchMatches.length === 0) return
+      setSearchOpen(true)
+      setHighlightIdx((i) =>
+        e.key === 'ArrowDown'
+          ? (i + 1) % searchMatches.length
+          : (i - 1 + searchMatches.length) % searchMatches.length,
+      )
+    } else if (e.key === 'Enter' && searchMatches.length > 0) {
+      e.preventDefault()
+      chooseLocation(searchMatches[Math.min(highlightIdx, searchMatches.length - 1)])
+    }
+  }
+
+  // Close the suggestion dropdown on any outside press.
+  useEffect(() => {
+    const onDown = (e: PointerEvent) => {
+      if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
+        setSearchOpen(false)
+      }
+    }
+    document.addEventListener('pointerdown', onDown)
+    return () => document.removeEventListener('pointerdown', onDown)
+  }, [])
 
   // ── Zoom & pan ──────────────────────────────────────────────────────────
 
@@ -419,6 +477,94 @@ export default function Maps() {
               {TYPE_LABEL[t]}
             </button>
           ))}
+        </div>
+
+        {/* Place search: type a name, pick a suggestion, the map selects it —
+            switching maps automatically when the place lives on another plate */}
+        <div className="relative mt-5 max-w-md" ref={searchRef}>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-soft"
+            aria-hidden
+          >
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5" />
+          </svg>
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => {
+              setQuery(e.target.value)
+              setSearchOpen(true)
+              setHighlightIdx(0)
+            }}
+            onFocus={() => setSearchOpen(true)}
+            onKeyDown={onSearchKeyDown}
+            placeholder="Search a place — Troy, Crete, Delphi…"
+            aria-label="Search places on the atlas"
+            className="w-full rounded-sm hairline bg-parchment py-2.5 pl-9 pr-8 font-sans text-[0.85rem] tracking-[0.04em] text-ink placeholder:text-ink-soft/60 focus:border-gold focus:outline-none"
+          />
+          {query && (
+            <button
+              type="button"
+              aria-label="Clear search"
+              onClick={() => {
+                setQuery('')
+                setSearchOpen(false)
+              }}
+              className="absolute right-2 top-1/2 flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded-full font-sans text-[0.8rem] text-ink-soft transition-colors hover:text-ink"
+            >
+              ×
+            </button>
+          )}
+          {searchOpen && query.trim() !== '' && (
+            <ul
+              className="absolute inset-x-0 top-full z-50 mt-1.5 overflow-hidden rounded-sm hairline bg-ivory shadow-warm-lg"
+              role="listbox"
+              aria-label="Matching places"
+            >
+              {searchMatches.length === 0 ? (
+                <li className="px-4 py-3 font-sans text-[0.8rem] text-ink-soft">
+                  No places match “{query.trim()}”.
+                </li>
+              ) : (
+                searchMatches.map((loc, i) => {
+                  const onThisMap = loc.maps.includes(activeMap) && Boolean(loc.coords[activeMap])
+                  const homeMap = MAPS.find(
+                    (m) => m.id === (loc.maps.find((mm) => loc.coords[mm]) ?? loc.maps[0]),
+                  )
+                  return (
+                    <li key={loc.id}>
+                      <button
+                        type="button"
+                        role="option"
+                        aria-selected={i === highlightIdx}
+                        onMouseEnter={() => setHighlightIdx(i)}
+                        onClick={() => chooseLocation(loc)}
+                        className={`flex w-full items-center justify-between gap-2 px-4 py-2.5 text-left font-sans text-[0.82rem] tracking-[0.04em] transition-colors ${
+                          i === highlightIdx ? 'bg-gold/15 text-ink' : 'text-ink-soft hover:bg-gold/10'
+                        }`}
+                      >
+                        <span className="flex items-center gap-2">
+                          <TypeGlyph type={loc.type} className="h-3.5 w-3.5 text-terracotta" />
+                          {loc.name}
+                        </span>
+                        {!onThisMap && homeMap && (
+                          <span className="shrink-0 text-[0.62rem] uppercase tracking-[0.1em] text-ink-soft/70">
+                            {homeMap.label}
+                          </span>
+                        )}
+                      </button>
+                    </li>
+                  )
+                })
+              )}
+            </ul>
+          )}
         </div>
 
         <div className="mt-10 grid items-start gap-8 lg:grid-cols-[62fr_38fr]">
