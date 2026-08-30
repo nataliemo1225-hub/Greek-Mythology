@@ -223,20 +223,111 @@ export const kings: King[] = [
     epithet: 'the Wheel-Bound',
     realm: 'The land of the Lapiths, in Thessaly',
     group: 'cursed',
-    parents: 'Phlegyas (some say Ares); father of Pirithous',
+    parents: 'Phlegyas (some say Ares); father of Pirithous by Dia — though some said Zeus himself sired the boy',
     famousFor: 'Embraced a cloud made in Hera’s image — fathered the centaurs, and spins forever on a wheel of fire',
     summary:
       "Ixion, king of the Lapiths in Thessaly, committed two crimes that had never been committed before. The first was on earth: he promised his father-in-law Deioneus a rich bride-price for his daughter Dia, then invited the old man to a feast and hurled him into a pit of burning coals — the first murder of kin the world had seen, and so foul that no mortal priest would purify him. The second crime was in heaven: Zeus himself took pity on the outcast, cleansed him, and raised him to the table of the gods — and Ixion repaid the greatest of benefactions by lusting after his host's wife. Zeus shaped a cloud into Hera's likeness, the phantom Nephele, and Ixion embraced it and boasted of his conquest; from that union of a mortal man and a cloud was born Centauros, who fathered the whole savage race of centaurs upon the mares of Thessaly. For the insult Zeus bound him to a winged wheel of fire that spins forever — some say across the sky, some in Tartarus — where he whirls eternally, crying out the sentence of his own education: show kindness to your benefactor. His son by Dia was Pirithous, at whose wedding the Lapiths and the centaurs fought their famous war.",
     keyMyths: [
-      'He lured his father-in-law Deioneus to a feast and threw him into a fire-pit — the first kin-murder in the world.',
-      'No one on earth would purify him; Zeus himself cleansed the outcast and seated him at the table of the gods.',
-      "On Olympus he lusted after Hera; Zeus made a cloud-phantom in her image — Nephele — and Ixion embraced it and boasted of it.",
-      'From the man and the cloud was born Centauros, who begot the race of centaurs on the mares of Thessaly.',
-      'Zeus bound him to a winged wheel of fire that spins forever; he whirls eternally, crying "Honor your benefactor."',
-      "His son Pirithous fought the centaurs — his own half-kin — beside Theseus at his wedding feast.",
+      'He lured his father-in-law Deioneus to a feast and hurled him into a pit of burning coals over an unpaid bride-price — the first murder of kin the world had seen.',
+      'No priest on earth would purify so foul a crime; maddened and outcast, he wandered until Zeus himself took pity, cleansed him, and seated him at the table of the gods.',
+      "On Olympus he repaid his benefactor by lusting after Hera; Zeus shaped a cloud into her image — the phantom Nephele — and Ixion embraced it and boasted of the conquest.",
+      'From that union of mortal man and cloud was born Centauros, who begot the whole savage race of centaurs upon the mares of Thessaly.',
+      'Zeus hurled him from heaven and had Hermes bind him to a winged wheel of fire that spins forever, in the sky or in Tartarus, where he whirls eternally, crying "Honor your benefactor."',
+      'His son by Dia was Pirithous — though some said Zeus himself had sired the boy — and at his wedding feast the Lapiths fought the centaurs, their own half-kin, beside Theseus.',
+    ],
+    features: [
+      {
+        eyebrow: 'The First Kin-Murder',
+        title: 'The Bride-Price and the Fire-Pit',
+        lede: 'Ixion won his bride with a promise and paid her father with a pit of burning coals. It was the first murder of kin the world had ever seen — a crime so new and so foul that no priest on earth would wash it away.',
+        facts: [
+          { label: 'The bride', value: 'Dia, daughter of Deioneus' },
+          { label: 'The promise', value: 'A rich bride-price, never paid' },
+          { label: 'The victim', value: 'Deioneus, his father-in-law' },
+          { label: 'The trap', value: 'A feast in the old man’s honor' },
+          { label: 'The weapon', value: 'A hidden pit of burning coals' },
+          { label: 'The stain', value: 'The first murder of kin, ever' },
+          { label: 'The consequence', value: 'No mortal would purify him' },
+          { label: 'The pardon', value: 'Zeus cleansed him — and raised him to Olympus' },
+        ],
+        sections: [
+          {
+            heading: 'The Debt and the Trap',
+            body: 'Ixion desired Dia, the daughter of Deioneus, and won her hand the way kings did — with a pledge of splendid gifts to her father. The wedding was celebrated; the bride-price was not. When Deioneus pressed for what was owed him, Ixion did not refuse outright. He prepared instead: a trench dug in the forecourt of his palace, filled with coals and ash, and lightly covered over. Then he invited the old man to a feast of reconciliation. Deioneus came in trust, as a guest to his son-in-law’s table, stepped where the floor seemed solid, and went down into the fire. Some tellings say Ixion seized him and hurled him in. Either way the treachery was complete: a host had murdered his guest, and a son his father by marriage.',
+          },
+          {
+            heading: 'A Crime Without a Name',
+            body: 'The world had seen violence before, but not this. Kin-murder carried a pollution the Greeks called miasma, and Ixion’s was the first of its kind — there was no rite for it, because no one had imagined it. Mad with guilt, or maddened by the Furies that such a crime wakes, he wandered the earth an outcast, and every land drove him on: no priest would perform the purification, no king would take the suppliant in. To shelter him was to share his stain. The poets made him the pattern of the unpurifiable man — until heaven itself intervened.',
+          },
+          {
+            heading: 'The Pardon He Would Betray',
+            body: 'It was Zeus, guardian of guests and suppliants, who did what no mortal dared. He took pity on the wanderer, cleansed him of the blood with his own divine rite, and — beyond all measure — raised him to Olympus and seated him at the table of the gods. It was the greatest benefaction a mortal had ever received, and it became the measure of Ixion’s second crime: the man whom Zeus had lifted from the ashes of his own fire-pit repaid his host by desiring his host’s wife. The fire-pit explains the wheel. A king who could betray his father-in-law over gold was never going to honor his benefactor in heaven.',
+          },
+        ],
+      },
+      {
+        eyebrow: 'The Insult in Heaven',
+        title: 'The Cloud-Bride and the Wheel of Fire',
+        relatedIds: ['zeus', 'hera'],
+        lede: 'Raised to the table of the gods, Ixion repaid his host by lusting after Hera herself. Zeus answered with a cloud shaped like his queen — and from that phantom embrace came the centaurs, and for Ixion a wheel of fire that spins forever.',
+        facts: [
+          { label: 'The temptation', value: 'Hera, wife of his host and benefactor' },
+          { label: 'The decoy', value: 'Nephele — a cloud in Hera’s image' },
+          { label: 'The boast', value: 'He cried that he had lain with Zeus’s queen' },
+          { label: 'The child', value: 'Centauros, born of man and cloud' },
+          { label: 'The race', value: 'The centaurs, on the mares of Thessaly' },
+          { label: 'The sentence', value: 'Bound to a winged wheel of fire' },
+          { label: 'The cry', value: '"Honor your benefactor"' },
+          { label: 'The place', value: 'The sky, some say; Tartarus, say others' },
+        ],
+        sections: [
+          {
+            heading: 'The Guest Who Coveted His Host’s Wife',
+            body: 'At the feasts of the gods, among the very company that had forgiven the unforgivable, Ixion’s eyes settled on Hera. Some say he tried to seduce her; some that she noticed his gaze and told her husband. Zeus, who reads hearts as easily as he hurls bolts, did not strike at once. He devised a test that was also a trap: from the stuff of cloud he shaped a phantom in Hera’s exact likeness — Nephele, whose name is simply the Greek word for cloud — and set her in the mortal’s path.',
+          },
+          {
+            heading: 'The Embrace of a Cloud',
+            body: 'Ixion took the bait and more. He lay with the cloud-phantom and then, not content with the act, boasted through the halls that he had possessed the wife of Zeus. The union itself was monstrous and bore monstrous fruit: Nephele — or, in some tellings, Dia forced into the same deception — brought forth Centauros, a creature as misbegotten as his conception. Driven out among the wild slopes of Pelion, Centauros coupled with the Magnesian mares of Thessaly, and from those unions sprang the whole race of centaurs: the drunken, violent horse-men who would one day tear apart the wedding of Ixion’s own son. The grandfather of the centaurs had made his grandson’s enemies.',
+          },
+          {
+            heading: 'The Wheel That Spins Forever',
+            body: 'For the insult there was no second pardon. Zeus struck Ixion from Olympus and commanded Hermes to bind him — with serpents, some say — to a winged wheel of fire, and set it spinning: across the sky in the oldest tellings, in the pit of Tartarus in the later ones, where the poets ranged him beside Tantalus and Sisyphus among the eternally punished. And as he whirls he cries out the lesson he learned too late, the sentence of his own education repeated without end: show kindness to your benefactor. The wheel of Ixion became proverbial — the image of a punishment that never rests, fitted exactly to a gratitude that never existed.',
+          },
+        ],
+      },
+      {
+        eyebrow: 'A Doubtful Father',
+        title: 'Zeus, Dia, and the Begetting of Pirithous',
+        relatedIds: ['zeus', 'theseus'],
+        lede: 'The poets call Pirithous the son of Ixion and Dia — but another whisper ran beneath the tradition. Homer lets Zeus himself count Dia among his mortal loves, and the later tellers say the god came to her as a stallion beneath Mount Pelion. If so, the proudest of the Lapiths was no son of the wheel-bound sinner at all.',
+        facts: [
+          { label: 'The mother', value: 'Dia, daughter of Deioneus' },
+          { label: 'The named husband', value: 'Ixion, king of the Lapiths' },
+          { label: 'The rival father', value: 'Zeus — "some say"' },
+          { label: 'The god’s guise', value: 'A stallion circling his bride' },
+          { label: 'The place', value: 'Beneath Mount Pelion, Thessaly' },
+          { label: 'Homer’s witness', value: 'Iliad 14: Zeus counts Dia among his loves' },
+          { label: 'The son', value: 'Pirithous, "peer of the gods in counsel"' },
+          { label: 'The irony', value: 'A horse-sired king whose foes were horse-men' },
+        ],
+        sections: [
+          {
+            heading: 'Zeus’s Own Confession',
+            body: 'The suspicion begins with Homer. In the Iliad, when sleep and longing overtake him, Zeus runs over the mortal women he has loved — and among Ixion’s wife’s very name is Dia, "who bore Pirithous, peer of the gods in counsel." No explanation is given, none needed: the king of heaven places Ixion’s queen in the roll of his own conquests, and names the boy as his. The scholiasts and later mythographers drew out what Homer left implied — that Zeus desired Dia and took her, and that the heir of the Lapiths carried divine blood. Some of the tellers added a stranger detail: the god came to her in the shape of a stallion, circling round and round his bride beneath the slopes of Pelion.',
+          },
+          {
+            heading: 'Two Fathers, One Throne',
+            body: 'The older and plainer tradition kept Pirithous mortal-born: Ixion wed Dia for a promised bride-price, and the boy was the fruit of that marriage — a marriage sealed, infamously, by the murder of the bride’s father. The two paternities sat side by side and were never reconciled, as so often in Greek myth: the same hero could be the lawful son of a disgraced king and, in the same breath, the secret son of the god who condemned that king to the wheel. There is a dark symmetry in the possibility. Zeus punished Ixion for reaching toward Hera — and on the rival account had already reached toward Ixion’s wife, leaving the cuckolded king to raise another man’s son upon his throne.',
+          },
+          {
+            heading: 'The Horse and the Half-Men',
+            body: 'Whichever father is named, the horse haunts the story. Ixion’s union with the cloud Nephele begot Centauros, grandsire of the centaurs — making the savage horse-men of Thessaly, in a sense, Pirithous’s own half-kin. And if Zeus truly came to Dia as a stallion, then the Lapith king was horse-begotten on both sides of his house. It was at his wedding to Hippodamia that the account came due: the centaur guests, maddened by wine, seized the bride and the women of the feast, and Pirithous with Theseus and the Lapiths fought them through the hall in the Centauromachy — the battle the Greeks carved on the Parthenon, where Lapith and centaur still grapple in marble.',
+          },
+        ],
+      },
     ],
     relatedIds: ['zeus', 'hera', 'theseus'],
-    locationIds: ['thessaly', 'olympus', 'underworld'],
+    locationIds: ['lapiths', 'thessaly', 'olympus', 'underworld'],
   },
   // ── Founders & Fabled Kings ─────────────────────────────────
   {

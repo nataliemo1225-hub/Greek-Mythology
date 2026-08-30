@@ -427,8 +427,19 @@ export const locations: MythLocation[] = [
     maps: ['greece'],
     coords: { greece: { x: 36, y: 24 } },
     description:
-      'The broad plain of northern Greece, ringed by mountains, was the battlefield of the Titanomachy. For ten years the Titans, encamped on Mount Othrys at the plain\'s southern edge, warred against the young gods mustered on Mount Olympus to the north, and the level ground between the two peaks shook with their collisions. It was here that the Hecatoncheires hurled their three hundred rocks and Zeus\'s thunderbolts broke the old order of Cronus.',
-    relatedIds: ['zeus', 'cronus', 'atlas', 'rhea', 'poseidon', 'hades', 'titanomachy', 'jason', 'golden-fleece'],
+      'The broad plain of northern Greece, ringed by mountains, was the battlefield of the Titanomachy. For ten years the Titans, encamped on Mount Othrys at the plain\'s southern edge, warred against the young gods mustered on Mount Olympus to the north, and the level ground between the two peaks shook with their collisions. It was here that the Hecatoncheires hurled their three hundred rocks and Zeus\'s thunderbolts broke the old order of Cronus. Later ages filled the same plain with a second, stranger war: in the valley of the Peneus dwelt the Lapiths under Ixion of the fiery wheel, and at the wedding of his son Pirithous — some said Zeus\'s own son — the Lapiths fought the centaurs, their half-kin begotten of Ixion\'s cloud-bride upon Thessaly\'s mares, until the horse-men were driven from the land.',
+    relatedIds: ['zeus', 'cronus', 'atlas', 'rhea', 'poseidon', 'hades', 'titanomachy', 'jason', 'golden-fleece', 'ixion'],
+  },
+  {
+    id: 'lapiths',
+    name: 'Land of the Lapiths',
+    pronunciation: '/ˈlæpɪθs/',
+    type: 'realm',
+    maps: ['greece'],
+    coords: { greece: { x: 33, y: 20 } },
+    description:
+      'In the Thessalian valley of the Peneus, beneath the slopes of Mount Pelion, dwelt the Lapiths — a proud people ruled by Ixion, he of the fiery wheel. Their fame rests on the bloodiest wedding feast in myth: when Pirithous, son of Ixion by Dia (though some said Zeus himself had sired the boy), married Hippodamia, the invited centaurs grew drunk and seized the bride, and the Lapiths fought them through the hall until the brutes were driven from Thessaly. The Centauromachy — that war of men against their half-kin — was later carved into the metopes of the Parthenon itself.',
+    relatedIds: ['ixion', 'zeus', 'theseus'],
   },
   {
     id: 'iolcus',
